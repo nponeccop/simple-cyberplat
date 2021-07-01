@@ -20,5 +20,9 @@
   "repository": {
     "type": "url",
     "url": "https://github.com/kannarao/simple-cyberplat.git"
+  },
+  "devDependencies": {
+    "randomstring": "^1.2.1",
+    "tap": "^15.0.9"
   }
 }

@@ -1,3 +1,4 @@
+"use strict"
 const request = require("request");
 const qs = require('qs');
 const qsIconv = require('qs-iconv');
@@ -19,31 +20,28 @@ const Cyberplat = function (ops) {
 
   const go = function(type, obj, callback) {
     let url = null;
+    console.error({type})
     if (provider[type]) {
       url = provider[type];
     } else {
       callback(true);
+      return
     }
 
     const payload = builder.buildMessage(type, obj);
-    const signature_b64 = signature.getSignature(payload).match(/.{1,76}/g).join("\r\n");
+    const signature_b64 = signature.getSignature(payload)// .match(/.{1,76}/g).join("\r\n");
 
-    const payloadWithSign = `BEGIN\r\n${payload}\r\nEND\r\nBEGIN SIGNATURE\r\n${signature_b64}END SIGNATURE\r\n`;
-    
-    const payloadEncoded = qs
-            .stringify({inputmessage: payloadWithSign}, {encoder: qsIconv.encoder('win1253')})
-            .replace(/\%02/g,"")
-            .replace(/\%20/g,"+");
+    const signatureEncoded = encodeURIComponent(signature_b64)
 
     let headers = {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'X-CyberPlat-Proto': 'SHA1RSA'
+      'Content-Type': 'text/plain',
+      'x-sign' : signatureEncoded
     }
     let options = {
       url,
       method: 'POST',
       headers,
-      form: payloadEncoded
+      body: payload
     }
 
     request(options, function (e, r, body) {
