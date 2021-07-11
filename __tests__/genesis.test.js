@@ -21,7 +21,7 @@ test('should return something', async () => {
     }
   })
 
-  axios.post.mockResolvedValue(response)
+  axios.request.mockResolvedValue(response)
   const result = await transport.request({
     REQ_TYPE: 12
   })
