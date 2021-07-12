@@ -12,6 +12,7 @@
   "author": "<kannaraokarnam123@gmail.com> (http://kannarao.dev)",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^26.0.24",
     "axios": "^0.21.1",
     "iconv-lite": "^0.6.3"
   },
