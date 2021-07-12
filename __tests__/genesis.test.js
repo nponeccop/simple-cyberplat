@@ -70,7 +70,7 @@ describe('genesis.request', () => {
     })
     // maybe this is an unnecessary call
     expect(axios.request).toBeCalled()
-    // get encoded response with the transformResponse function from the config of the axios.request call
+    // get decoded response with the transformResponse function from the config of the axios.request call
     const response = transformResponse(encodedAnswer)
     // check response
     expect(response).toEqual(decodedAnswer)
