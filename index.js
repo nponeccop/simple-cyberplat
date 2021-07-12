@@ -53,5 +53,3 @@ class Genesis {
 }
 
 exports.Genesis = Genesis
-exports.requestFromObj = requestFromObj
-exports.responseToObj = responseToObj
