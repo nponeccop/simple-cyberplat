@@ -74,7 +74,8 @@ describe('genesis.request', () => {
     const response = transformResponse(encodedAnswer)
     // check response
     expect(response).toEqual(decodedAnswer)
-    // why is it called 2 times. 1 - the actual call, 2 - prepare a spy?
+    // it is called two times because there are two tests
+    // i need to find a way to isolate calls
     expect(axios.request).toBeCalledTimes(2)
   })
 })
