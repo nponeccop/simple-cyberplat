@@ -41,7 +41,7 @@ Object {
   },
   "headers": Object {
     "Content-Type": "text/plain; encoding=windows-1251",
-    "x-sign": "CksfMGXRE51QzUnvEeTzFCcDm7lsevqgc3drhcPQQQpDH2PndfUKiq11lJhao5ai%2FzIAjFINxGLDR2yxSAnyl4KunFLuCGzPMBTwkYqrTjGFOPDyAuy6a9vwQ1OA9qGdc7gZPAVe65TzsMjJ1CXyXkvWphjpqCehLYpqnoyXRGs%3D",
+    "x-sign": "H5JyXfWP2ebpE8mIur5aO09nP4d64xV8bP6g7NpP87R5%2BkSiR9wU8s6%2FxghqvmHRukB5II2jGDYGAU5wQeXZyC0ZVj13sXP2MsdfY2Oy%2BhJ1T%2F4Q99LAZNl49ymZlbvHq%2B50D9jnOqZ07AsxOU34yTB%2BajzipoRKhBfW7V9OE30%3D",
   },
   "method": "POST",
   "responseType": "arraybuffer",
