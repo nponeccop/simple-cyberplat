@@ -5,7 +5,7 @@ jest.mock('axios')
 
 /** Genesis setup and request  */
 async function requestBoilerplate (requestBody) {
-  const key = await fsp.readFile('secret/privateKey.pem', 'utf-8')
+  const key = await fsp.readFile('testKeys/privateKey.pem', 'utf-8')
   return await new Genesis({
     defaultFields: {
       AP: 1111
