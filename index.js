@@ -3,7 +3,7 @@ const crypto = require('crypto')
 const iconv = require('iconv-lite')
 const axios = require('axios')
 
-const DELIMITER = '\r'
+const DELIMITER = '\r\n'
 
 const requestFromObj = obj =>
   iconv.encode(
