@@ -6,7 +6,7 @@ A heavily refactored derivative of cyberplat-simple
 
 ## Example
 
-See `test.js`
+See `genesis.js`
 
 ## Key differences
 

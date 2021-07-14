@@ -4,7 +4,7 @@
   "description": "cyberplat integration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "cyberplat"
@@ -12,6 +12,7 @@
   "author": "<kannaraokarnam123@gmail.com> (http://kannarao.dev)",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^26.0.24",
     "axios": "^0.21.1",
     "iconv-lite": "^0.6.3"
   },
@@ -20,6 +21,13 @@
     "url": "https://github.com/kannarao/simple-cyberplat.git"
   },
   "devDependencies": {
-    "@types/node": "^15.14.0"
+    "@types/node": "^15.14.0",
+    "jest": "^27.0.6",
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }
