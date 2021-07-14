@@ -1,6 +1,6 @@
 const axios = require('axios')
 const fsp = require('fs').promises
-const { Genesis } = require('..')
+const { Genesis } = require('../index')
 jest.mock('axios')
 
 /** Genesis setup and request  */

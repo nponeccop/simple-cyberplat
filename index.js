@@ -38,6 +38,7 @@ class Genesis {
     const newObj = { ...(this.defaultFields), ...obj }
     const data = requestFromObj(newObj)
 
+    // encodeURIComponent - replace symbols like \, +, =
     return await axios.request({
       url,
       method: 'POST',
