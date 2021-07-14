@@ -13,7 +13,7 @@ const getTransport = async () => {
         url: 'https://predproc.tothemars.io/pay'
       },
       crypto: {
-        key: await fsp.readFile('./secret/privateKey.pem', 'utf-8'),
+        key: await fsp.readFile('./testKeys/privateKey.pem', 'utf-8'),
         passphrase: ''
       }
     })
